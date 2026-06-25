@@ -1,0 +1,24 @@
+# Android Studio and Gradle files
+*.iml
+.gradle
+.kotlin
+/local.properties
+/.idea/
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Virtual Environments and IDE Settings
+.venv/
+venv/
+ENV/
+.vscode/
+.DS_Store
+
+# User-specific configuration
+*.user
+*.suo
+*.userosscache
+*.sln.docstates

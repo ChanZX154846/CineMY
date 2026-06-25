@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cinemy_surface">#FFFFFF</color>
+    <color name="cinemy_card">#FFFFFF</color>
+    <color name="cinemy_card_stroke">#CCCCCC</color>
+    <color name="cinemy_nav">#F3ECFA</color>
+    <color name="cinemy_primary">#6750A4</color>
+    <color name="cinemy_text_primary">#1C1B1F</color>
+    <color name="cinemy_text_secondary">#49454F</color>
+</resources>

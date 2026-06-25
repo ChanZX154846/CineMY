@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    tools:context=".AppLockActivity">
+
+    <TextView
+        android:id="@+id/tvLockTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_locked_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/cinemy_text_primary"/>
+
+    <TextView
+        android:id="@+id/tvLockSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_pin"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/vertical_spacing_small"
+        android:textColor="@color/cinemy_text_secondary"/>
+
+    <LinearLayout
+        android:id="@+id/pinEntryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <!-- PIN Dots -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/vertical_spacing_large">
+
+            <ImageView android:id="@+id/dot1" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/btn_star_big_off" android:layout_margin="12dp" app:tint="@color/cinemy_primary" android:contentDescription="PIN Digit 1"/>
+            <ImageView android:id="@+id/dot2" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/btn_star_big_off" android:layout_margin="12dp" app:tint="@color/cinemy_primary" android:contentDescription="PIN Digit 2"/>
+            <ImageView android:id="@+id/dot3" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/btn_star_big_off" android:layout_margin="12dp" app:tint="@color/cinemy_primary" android:contentDescription="PIN Digit 3"/>
+            <ImageView android:id="@+id/dot4" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/btn_star_big_off" android:layout_margin="12dp" app:tint="@color/cinemy_primary" android:contentDescription="PIN Digit 4"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Numeric Keypad -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_marginBottom="@dimen/vertical_spacing_large">
+
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn1" android:text="1" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn2" android:text="2" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn3" android:text="3" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn4" android:text="4" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn5" android:text="5" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn6" android:text="6" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn7" android:text="7" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn8" android:text="8" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn9" android:text="9" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+
+            <View android:layout_width="90dp" android:layout_height="90dp"/>
+            <Button style="@style/Widget.MaterialComponents.Button.TextButton" android:id="@+id/btn0" android:text="0" android:textSize="28sp" android:layout_width="90dp" android:layout_height="90dp"/>
+            <ImageButton android:id="@+id/btnDelete" android:layout_width="90dp" android:layout_height="90dp" android:src="@android:drawable/ic_input_delete" android:background="?attr/selectableItemBackgroundBorderless" app:tint="@color/cinemy_primary" android:contentDescription="Delete Digit"/>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvForgotPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pin"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/cinemy_primary"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

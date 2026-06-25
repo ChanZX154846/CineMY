@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MovieDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_button_desc"
+                android:layout_marginBottom="@dimen/vertical_spacing_small"/>
+
+            <ImageView
+                android:id="@+id/imgMovieDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="400dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/movie_detail_content_description"
+                tools:src="@drawable/shangchi"/>
+
+            <TextView
+                android:id="@+id/txtMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_primary"
+                android:paddingTop="@dimen/vertical_spacing_medium"
+                tools:text="Movie Title"/>
+
+            <TextView
+                android:id="@+id/txtMovieGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/cinemy_text_secondary"
+                android:paddingTop="@dimen/vertical_spacing_small"
+                tools:text="Action"/>
+
+            <TextView
+                android:id="@+id/txtMovieDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/cinemy_text_secondary"
+                android:paddingTop="@dimen/vertical_spacing_small"
+                tools:text="2h 10m"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_description_label"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/cinemy_text_primary"
+                android:paddingTop="@dimen/vertical_spacing_medium"/>
+
+            <TextView
+                android:id="@+id/txtMovieDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_movie_description"
+                android:textSize="16sp"
+                android:textColor="@color/cinemy_text_secondary"
+                android:paddingTop="@dimen/vertical_spacing_small"/>
+
+            <Button
+                android:id="@+id/btnBookTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_ticket"
+                android:layout_marginTop="@dimen/vertical_spacing_large"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinemy_nav"
+        app:itemIconTint="@color/cinemy_primary"
+        app:itemTextColor="@color/cinemy_text_primary"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>

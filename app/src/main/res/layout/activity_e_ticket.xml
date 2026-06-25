@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ETicketActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <LinearLayout
+                android:id="@+id/ticketView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="@dimen/vertical_spacing_medium"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/e_ticket_title"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cinemy_text_primary"/>
+
+                <TextView
+                    android:id="@+id/textETicketMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:paddingTop="@dimen/vertical_spacing_large"
+                    android:textColor="@color/cinemy_text_primary"
+                    tools:text="Movie Title"/>
+
+                <TextView
+                    android:id="@+id/textETicketSeats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="@dimen/vertical_spacing_small"
+                    android:textColor="@color/cinemy_text_secondary"
+                    tools:text="Seats: A1, A2"/>
+
+                <TextView
+                    android:id="@+id/textETicketShowtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="@dimen/vertical_spacing_small"
+                    android:textColor="@color/cinemy_text_secondary"
+                    tools:text="Time: 10:00 AM"/>
+
+                <TextView
+                    android:id="@+id/textETicketTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingTop="@dimen/vertical_spacing_small"
+                    android:textColor="@color/cinemy_text_primary"
+                    tools:text="Paid: RM40"/>
+
+                <TextView
+                    android:id="@+id/textBookingId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="@dimen/vertical_spacing_small"
+                    android:textColor="@color/cinemy_text_secondary"
+                    tools:text="Booking ID: 12345678"/>
+
+                <ImageView
+                    android:id="@+id/imgQrCode"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/vertical_spacing_medium"
+                    android:contentDescription="Ticket QR Code"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ticket_verification_info"
+                    android:textSize="16sp"
+                    android:paddingTop="@dimen/vertical_spacing_large"
+                    android:textColor="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnDownloadTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/download_e_ticket"
+                android:layout_marginTop="@dimen/vertical_spacing_large"
+                android:padding="@dimen/inner_padding"/>
+
+            <Button
+                android:id="@+id/btnBackHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/back_to_home"
+                android:layout_marginTop="@dimen/vertical_spacing_small"
+                android:padding="@dimen/inner_padding"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinemy_nav"
+        app:itemIconTint="@color/cinemy_primary"
+        app:itemTextColor="@color/cinemy_text_primary"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>

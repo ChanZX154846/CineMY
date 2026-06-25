@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SeatSelectionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_button_desc"
+                android:layout_marginBottom="@dimen/vertical_spacing_small"/>
+
+            <TextView
+                android:id="@+id/textSeatMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_primary"
+                tools:text="Movie Title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_showtime_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_primary"
+                android:paddingTop="@dimen/vertical_spacing_medium"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_spacing_small"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupShowtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip10am"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showtime_10am"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip1pm"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showtime_1pm"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip4pm"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showtime_4pm"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip7pm"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showtime_7pm"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip10pm"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showtime_10pm"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seat_selection_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_primary"
+                android:paddingTop="@dimen/vertical_spacing_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/screen_label"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_secondary"
+                android:layout_gravity="center"
+                android:padding="@dimen/vertical_spacing_medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                style="?android:attr/buttonBarStyle">
+
+                <Button
+                    android:id="@+id/seatA1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_a1"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+                    android:id="@+id/seatA2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_a2"
+                    android:layout_marginStart="@dimen/vertical_spacing_small"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+                    android:id="@+id/seatA3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_a3"
+                    android:layout_marginStart="@dimen/vertical_spacing_small"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/vertical_spacing_small"
+                style="?android:attr/buttonBarStyle">
+
+                <Button
+                    android:id="@+id/seatB1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_b1"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+                    android:id="@+id/seatB2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_b2"
+                    android:layout_marginStart="@dimen/vertical_spacing_small"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+                    android:id="@+id/seatB3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/seat_b3"
+                    android:layout_marginStart="@dimen/vertical_spacing_small"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textSelectedSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/cinemy_text_primary"
+                android:paddingTop="@dimen/vertical_spacing_large"
+                tools:text="Selected Seats: A1, A2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/vertical_spacing_medium"
+                android:background="@drawable/news_card_background"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_of_tickets"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cinemy_text_primary"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_minus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/decrease_quantity"/>
+
+                <TextView
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cinemy_text_primary"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/btnPlus"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_plus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/increase_quantity"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_title"
+                android:layout_marginTop="@dimen/vertical_spacing_medium"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinemy_nav"
+        app:itemIconTint="@color/cinemy_primary"
+        app:itemTextColor="@color/cinemy_text_primary"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>

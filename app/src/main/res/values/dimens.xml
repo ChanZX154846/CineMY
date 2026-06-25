@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="vertical_spacing_small">16dp</dimen>
+    <dimen name="vertical_spacing_medium">24dp</dimen>
+    <dimen name="vertical_spacing_large">32dp</dimen>
+    <dimen name="title_margin_bottom">32dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="inner_padding">12dp</dimen>
+</resources>
