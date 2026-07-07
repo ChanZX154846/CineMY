@@ -1,5 +1,6 @@
 package com.fypcinemy
 
+import android.annotation.SuppressLint
 import android.content.Context
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -128,6 +129,7 @@ object TicketStore {
             .getString(KEY_TICKETS, "[]") ?: "[]"
     }
 
+    @SuppressLint("UseKtx")
     private fun saveTicketsJson(context: Context, ticketsJson: String) {
         context
             .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)

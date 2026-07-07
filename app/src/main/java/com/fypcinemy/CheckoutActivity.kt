@@ -141,11 +141,12 @@ class CheckoutActivity : BaseActivity() {
                     finish()
                 }
 
-                .addOnFailureListener {
+                .addOnFailureListener { e ->
+                    android.util.Log.e("CheckoutActivity", "Booking save failed", e)
                     Toast.makeText(
                         this,
-                        "Booking save failed",
-                        Toast.LENGTH_SHORT
+                        "Booking save failed: ${e.message}",
+                        Toast.LENGTH_LONG
                     ).show()
                 }
         }

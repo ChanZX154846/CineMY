@@ -37,7 +37,11 @@ object FirebaseMovieRepository {
                         val imageName = document.getString("imageName")
 
                         // Only include movies that are in our local MovieCatalog
-                        val localMovie = MovieCatalog.findByTitle(title) ?: return@mapNotNull null
+                        val localMovie = MovieCatalog.findByTitle(title)
+                        if (localMovie == null) {
+                            android.util.Log.w("FirebaseMovieRepo", "Movie from Firestore not found in local catalog: $title")
+                            return@mapNotNull null
+                        }
 
                         Movie(
                             title = title,
